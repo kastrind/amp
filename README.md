@@ -1,2 +1,2 @@
 # amp
-Containerized apache, php, mysql
+Containerized apache, mysql, php
