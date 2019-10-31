@@ -5,10 +5,13 @@ services:
       context: './php/'
       args:
        PHP_VERSION: ${PHP_VERSION}
+    # alternatively, pull the image
+    #image: kastrind/amp-php
     networks:
       - backend
     volumes:
-      - ${PROJECT_ROOT}/:/var/www/html/
+      - '${PROJECT_ROOT}/:/var/www/html/'
+      - /var/www/html/vendor/
     container_name: php
   apache:
     build:
